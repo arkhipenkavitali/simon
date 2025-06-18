@@ -1,8 +1,12 @@
 import React from 'react';
 
-const GameButton: React.FC = () => {
+type Props = {
+	color: "red" | "green" | "yellow" | "blue";
+}
+
+const GameButton: React.FC<Props> = ({color}) => {
 	return (
-		<div>
+		<div style={{ backgroundColor: color }}>
 			button
 		</div>
 	);
